@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-body">
+    <input type="number" class="form-control" [(ngModel)]="n" />
+    <table>
+      <tr *ngFor="let number of getRandomNumbers()">
+        <th>{{ number }}</th>
+      </tr>
+    </table>
+  </div>
+</div>
