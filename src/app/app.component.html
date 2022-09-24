@@ -1,7 +1,13 @@
 <app-header title="{{ name }}"></app-header>
-<div class="container-fluid">
-  <h2>Juros simples</h2>
-  <app-simple-interests></app-simple-interests>
-  <h2>Juros Compostos</h2>
-  <app-compound-interests></app-compound-interests>
+<div class="container-fluid m-1">
+  <h2>Juros</h2>
+  <input type="radio" [(ngModel)]="option" [value]="1" />&nbsp;Simples
+  <input type="radio" [(ngModel)]="option" [value]="2" />&nbsp;Compostos
+
+  <div *ngIf="option == '1'">
+    <app-simple-interests></app-simple-interests>
+  </div>
+  <div *ngIf="option == '2'">
+    <app-compound-interests></app-compound-interests>
+  </div>
 </div>
